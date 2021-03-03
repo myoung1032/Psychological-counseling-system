@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<!-- 标题栏 -->
+	<link rel="icon" href="img/logo.ico" type="image/x-icon">
+	<!-- 收藏夹 -->
+	<meta charset="utf-8">
+	<title>学习中心</title>
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+	<!-- Js -->
+	<script src="http://jichuangclub.com/js/vendor/modernizr.min.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="http://jichuangclub.com/js/plugins.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="http://jichuangclub.com/js/jquery.counterup.js"></script>
+	<script src="js/user.js"></script>
+
+
+<body>
+
+
+
+<!-- Header Start -->
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-10" style="margin-left: -100px">
+				<a class="navbar-brand" href="../index.html">
+					<img src="img/logo.ico" style="width: 10%;margin-top: -15px;" alt="Logo">
+
+				</a>
+			</div>
+				<div class="collapse navbar-collapse col-md-2" id="bs-example-navbar-collapse-1">
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login" style="margin-left: 100px;">登录</button>
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register" >注册</button>
+
+				</div><!-- /.navbar-collapse -->
+			</div>
+		</div>
+	</div>
+
+
+
+</header><!-- header close -->
+<!-- 轮播 -->
+
+
+
+
+
+<!-- 登录窗口 -->
+<div id="login" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="close" data-dismiss="modal">
+					<span>&times;</span>
+				</button>
+			</div>
+			<div class="modal-title">
+				<h2 class="text-center">登录</h2>
+			</div>
+			<div class="modal-body">
+					<div class="form-group">
+						<label for="username">用户名</label>
+						<input id="username" class="form-control" type="text" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="password">密码</label>
+						<input id="password" class="form-control" type="password" placeholder="">
+					</div>
+					<div class="text-right">
+						<button class="btn btn-primary" type="submit" onclick="c_o_li_submit()">确认</button>
+						<button class="btn btn-danger" data-dismiss="modal">取消</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 注册窗口 -->
+<div id="register" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="close" data-dismiss="modal">
+					<span>&times;</span>
+				</button>
+			</div>
+			<div class="modal-title">
+				<h2 class="text-center">注册</h2>
+			</div>
+			<div class="modal-body">
+					<div class="form-group">
+						<label for="user">学号</label>
+						<input id="user" class="form-control" type="text" placeholder="如2001051525">
+					</div>
+					<div class="form-group">
+						<label for="name">姓名</label>
+						<input id="name" class="form-control" type="text" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="pass">密码</label>
+						<input id="pass" class="form-control" type="password" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="passconfirm">重复密码</label>
+						<input id="passconfirm" class="form-control" type="password" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="email">邮箱</label>
+						<input id="email" class="form-control" type="text" placeholder="@jnu.edu.com">
+					</div>
+					<div class="form-group">
+						<label for="deptno">所在系</label>
+						<input id="deptno" class="form-control" type="text" placeholder="">
+					</div>
+					<div class="text-right">
+						<button class="btn btn-primary" type="submit" onclick="register_submit()">确认</button>
+						<button class="btn btn-danger" data-dismiss="modal">取消</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="banner">
+	<section class="slider">
+		<div class="flexslider">
+			<ul class="slides" id="gwtd">
+			</ul>
+		</div>
+	</section>
+</div>
+<link rel="stylesheet" href="http://jichuangclub.com/css/flexslider.css" type="text/css" media="screen" />
+<script defer src="http://jichuangclub.com/js/jquery.flexslider.js"></script>
+<!-- 轮播 -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+
+    });
+    $(window).load(function(){
+        // 获取轮播图
+		$("#gwtd").prepend(
+			'<li>'
+			+'<div class="banner01" style="background-image:url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2508934512,659791701&fm=26&gp=0.jpg); background-size:100% 100%;">'
+			+'</div>'
+			+'</li>'
+		);
+        $("#gwtd").prepend(
+            '<li>'
+            +'<div class="banner01" style="background-image:url(https://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=%E5%8D%97%E7%A7%91%E5%A4%A7%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&hd=undefined&latest=undefined&copyright=undefined&cs=3123086216,908286522&os=1642838406,1892337593&simid=3535118823,162537501&pn=1&rn=1&di=145530&ln=1747&fr=&fmq=1614680873115_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%253A%252F%252F5b0988e595225.cdn.sohucs.com%252Fimages%252F20190227%252Ff60418ebd53e4644b8706e32df6fd2d5.jpeg%26refer%3Dhttp%253A%252F%252F5b0988e595225.cdn.sohucs.com%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Djpeg%3Fsec%3D1617272871%26t%3Df6116062b9983e9466d64abf14330717&rpstart=0&rpnum=0&adpicid=0&force=undefined); background-size:100% 100%;">'
+            +'</div>'
+            +'</li>'
+        );
+        $("#gwtd").prepend(
+            '<li>'
+            +'<div class="banner01" style="background-image:url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3727955214,3286527541&fm=26&gp=0.jpg); background-size:100% 100%;">'
+            +'</div>'
+            +'</li>'
+        );
+		$('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+                        // $('body').removeClass('loading');
+                    }
+		}); // flexslider
+    });
+</script>
+
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- header Nav Start -->
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+
+							<h1 style="font-weight: 550; margin-left: -60px;">导师名录</h1>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</div>
+	</div>
+</header><!-- header close -->
+
+
+
+
+<!-- Wrapper Start -->
+<section style="margin-top: -30px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<section id="service">
+						<div class="col-sm-6  col-md-2">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/01李少辉.png" />
+								<h4 style="text-align: right;">李少辉 </h4>
+								<p style="text-align: right;">国家二级注册心理咨询师</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/02孙巧芬.png" />
+								<h4 style="text-align: right;">孙巧芬 </h4>
+								<p style="text-align: right;">精神分析师</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/03刘东明.png" />
+								<h4 style="text-align: right;">刘东明 </h4>
+								<p style="text-align: right;">暨南大学心理学教授</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/04叶秉光.png" />
+								<h4 style="text-align: right;">叶秉光</h4>
+								<p style="text-align: right;">暨南大学副教授</p>
+							</div>
+
+						</div>
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/05刘向农.png" />
+								<h4 style="text-align: right;">刘向农 </h4>
+								<p style="text-align: right;">国家一级注册心理咨询师</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/06善因先生.png" />
+								<h4 style="text-align: right;">曹文研 </h4>
+								<p style="text-align: right;">心理学硕士</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/07刘汉城.png" />
+								<h4 style="text-align: right;">刘汉城</h4>
+								<p style="text-align: right;">国家二级注册心理咨询师</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/08王雪薇.png" />
+								<h4 style="text-align: right;">王雪薇 </h4>
+								<p style="text-align: right;">暨南大学副教授</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/09李华.png" />
+								<h4 style="text-align: right;">李华 </h4>
+								<p style="text-align: right;">精神分析师 </p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/10钟文辉.png" />
+								<h4 style="text-align: right;">钟文辉 </h4>
+								<p style="text-align: right;">国家二级注册心理咨询师 </p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/11税长源.png" />
+								<h4 style="text-align: right;">税长源 </h4>
+								<p style="text-align: right;">实习咨询师</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/12李俊.png" />
+								<h4 style="text-align: right;">李俊 </h4>
+								<p style="text-align: right;">实习咨询师 </p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/13骆涛.png" />
+								<h4 style="text-align: right;">骆涛 </h4>
+								<p style="text-align: right;"> 实习咨询师</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/14聂铁良.png" />
+								<h4 style="text-align: right;">聂铁良  </h4>
+								<p style="text-align: right;">实习咨询师</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/15陈鹉.png" />
+								<h4 style="text-align: right;">陈鹉  </h4>
+								<p style="text-align: right;"> 实习咨询师</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/16冯玮瑜.png" />
+								<h4 style="text-align: right;">冯伟瑜 </h4>
+								<p style="text-align: right;"> 实习咨询师</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/17吴俊智.png" />
+								<h4 style="text-align: right;">吴俊智</h4>
+								<p style="text-align: right;">  心理学硕士</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-2 ">
+							<div class="service-item">
+								<img src="http://jichuangclub.com/Main/team/18孙晓四.png" />
+								<h4 style="text-align: right;">孙晓四 </h4>
+								<p style="text-align: right;">心理学硕士</p></p>
+							</div>
+						</div>
+
+
+
+					</section>
+
+				</div>
+			</div><!-- .col-md-7 close -->
+			<!--<div class="col-md-5 col-sm-12">
+              <div class="block">
+                <img src="img/wrapper-img.png" alt="Img">
+              </div>
+            </div><!-- .col-md-5 close -->
+		</div>
+	</div>
+</section>
+
+
+
+
+</section>
+
+</section>
+
+</section>
+
+
+
+<!-- footer Start -->
+<footer style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190227%2Ff60418ebd53e4644b8706e32df6fd2d5.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617273331&t=d120ec303723fe57994985761ab39f13);padding:0" id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-md-offset-3">
+				<div class="col-md-3">
+					<h1 style="color: white; font-size: 25px;text-align: left; font-weight: 600;">招商合作</h1>
+					<p style="color: white; font-size: 16px;text-align: left;"><font color="red"><b>|</b></font>欢迎联系咨询</p >
+				</div>
+				<div class="col-md-4">
+					<h3 class="userIcon1"><p style="color: white;text-align:left;margin-left: 10px">&nbsp;15918780387（林先生）</p >
+					</h3>
+					<h3 class="userIcon2"><p style="color: white;text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;micjsphlim@gmail.com
+					</p >
+					</h3>
+					<h3 class="userIcon3"><p style="color: white;text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;广州市番禺区兴业大道东855号
+					</p >
+					</h3>
+				</div>
+				<div class="col-md-3">
+					<br/>
+				</div>
+			</div>
+		</div>
+		<br>
+		<p>Copyright &copy; 2020 - 2025 . All rights reserved. |南方科技大学学习中心| 如果部署到学校内部的话不用备案</p>
+	</div>
+</footer>
+<style type="text/css">.userIcon1 {
+	background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2414735009,2890415966&fm=26&gp=0.jpg) left center no-repeat;
+	padding-left: 16px;
+}
+
+.userIcon2 {
+	background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=808874320,1111181293&fm=26&gp=0.jpg) left center no-repeat;
+	padding-left: 16px;
+}
+
+.userIcon3 {
+	background: url(https://image.baidu.com/search/detail?ct=503316480&z=&tn=baiduimagedetail&ipn=d&word=%E5%8D%97%E6%96%B9%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=-1&hd=&latest=&copyright=&cs=3264479389,666307372&os=3552071997,4252615484&simid=0,0&pn=2&rn=1&di=94050&ln=1865&fr=&fmq=1614681406870_R&ic=&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&is=0,0&istype=2&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%253A%252F%252F5b0988e595225.cdn.sohucs.com%252Fq_70%252Cc_zoom%252Cw_640%252Fimages%252F20180203%252Fd4b28bf800b14668907b84e2d1304cfb.jpeg%26refer%3Dhttp%253A%252F%252F5b0988e595225.cdn.sohucs.com%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Djpeg%3Fsec%3D1617273405%26t%3D0fb0c7bd3fbbae7112fe8507b103fc36&rpstart=0&rpnum=0&adpicid=0&force=undefined) left center no-repeat;
+	padding-left: 16px;
+}</style>
+
+
+
+
+</body>
+</html>
